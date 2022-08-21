@@ -6,7 +6,7 @@
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/interactive-comment-section-react-react-context-GWkN4Iyx8P](https://www.frontendmentor.io/solutions/interactive-comment-section-react-react-context-GWkN4Iyx8P)
+- Solution URL: [https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt/hub/job-listing-with-react-and-tailwind-css-Mf6UvXndar](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt/hub/job-listing-with-react-and-tailwind-css-Mf6UvXndar)
 - Live Site URL: [https://job-listing-react-challenge.netlify.app/](https://job-listing-react-challenge.netlify.app/)
 
 ```js
