@@ -41,7 +41,7 @@ const JobMain = () => {
   };
   return (
     <>
-      <header className="bg-teal-500 mb-12">
+      <header className="colorCyan mb-12">
         <img
           src="/images/bg-header-desktop.svg"
           alt="bg-img-header"
@@ -53,7 +53,7 @@ const JobMain = () => {
           className="isMobile"
         />
       </header>
-      <main className="container m-auto ">
+      <main className="container m-auto">
         <div
           className={
             skillsFilter.length > 0

@@ -58,7 +58,7 @@ const Job = ({
             <span
               onClick={() => handleSetFilter(skill)}
               key={crypto.randomUUID()}
-              className="cursor-pointer font-bold textCyan backgroundCyan font-bold mr-4 mb-4  rounded lg:mb-0 hoverSkill"
+              className="cursor-pointer textCyan backgroundCyan font-bold mr-4 mb-4  rounded lg:mb-0 hoverSkill"
             >
               {skill}
             </span>
