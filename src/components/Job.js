@@ -1,9 +1,6 @@
 import React from "react";
-import { GET_IMAGES } from "../helpers/getImage";
-import Skills from "./Skills";
 
 const Job = ({
-  id,
   company,
   featured,
   newJob,
@@ -15,35 +12,59 @@ const Job = ({
   level,
   languages,
   tools,
-  setFilter,
+  logo,
+  handleSetFilter,
 }) => {
-  const skills = [role, level, languages, tools];
+  const skills = [role, level, ...languages, ...tools];
+
   return (
-    <>
-      <div className="headerCard">
-        <img src={GET_IMAGES[company]} alt={`${company}-logo`} />
-        <div className="top">
-          <h1>{company}</h1>
-          <div className="tag">
-            {newJob && <span>NEW!</span>}
-            {featured && <span>FEATURED</span>}
-          </div>
-        </div>
-        <div className="position">
-          <h2>{position}</h2>
-        </div>
-        <div className="details">
-          <p>
-            {postedAt} <span className="dote"></span> {contract}
-            <span className="dote"></span> {location}
-          </p>
-        </div>
+    <div
+      className={`flex flex-col bg-white shadow-md my-16 mx-6 p-2 rounded ${
+        featured && "border-l-4 borderCyan border-solid"
+      } lg:flex-row lg:my-6`}
+    >
+      <div>
+        <img
+          className="-mt-16 mb-4 w-20 h-20  lg:h-24 lg:w-24 lg:my-0"
+          src={logo}
+          alt={`${company}-logo`}
+        />
       </div>
-      <hr />
-      {skills.map((el, key) => (
-        <Skills key={key} el={el} setFilter={setFilter} />
-      ))}
-    </>
+      <div className=" flex flex-col justify-between ml-4">
+        <div className="flex items-center">
+          <h3 className="sm:text-m colorCyanText mr-2 ">{company}</h3>
+          {newJob && (
+            <span className="colorCyan text-white font-bold mr-2 pt-1 px-2 rounded-full sm:text-sm">
+              NEW!
+            </span>
+          )}
+          {featured && (
+            <span className="backgroundFeatured text-white font-bold mr-2 pt-1 px-2 rounded-full sm:text-sm">
+              FEATURED
+            </span>
+          )}
+        </div>
+        <h4 className=" colorText font-bold text-xl my-2  cursor-pointer companyHover">
+          {position}
+        </h4>
+        <p className="text-gray-400 font-bold">
+          {postedAt} · {contract} · {location}
+        </p>
+      </div>
+
+      <div className="flex flex-wrap items-center mt-4 mx-4 pt-4 border-t border-gray-400   lg:ml-auto lg:border-0 lg:pt-0 lg:mt-0">
+        {skills &&
+          skills.map((skill) => (
+            <span
+              onClick={() => handleSetFilter(skill)}
+              key={crypto.randomUUID()}
+              className="cursor-pointer font-bold textCyan backgroundCyan font-bold mr-4 mb-4  rounded lg:mb-0 hoverSkill"
+            >
+              {skill}
+            </span>
+          ))}
+      </div>
+    </div>
   );
 };
 

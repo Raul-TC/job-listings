@@ -1,8 +1,7 @@
-import "./App.css";
-import Main from "./components/Main";
+import JobMain from "./components/JobMain";
 
 function App() {
-  return <Main />;
+  return <JobMain />;
 }
 
 export default App;

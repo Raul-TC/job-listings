@@ -1,8 +1,100 @@
-.skills {
-  display: inline-block;
-  padding: 1rem 2rem;
-  margin: .5rem 1rem;
-  background-color: aqua;
-  color: #3c3c3c;
-  cursor: pointer;
+body{
+font-family: 'League Spartan', sans-serif;
+}
+
+header img{
+  width: 100%;
+}
+.isMobile{
+  display: block;
+}
+.isDesktop{
+  display: none;
+}
+.back{
+  background-color: hsl(180, 52%, 96%);
+}
+
+.textColor{
+color:hsl(180, 52%, 96%);
+}
+
+.backgroundCyan{
+  background-color:hsl(180, 31%, 95%);
+
+}
+.colorCyan{
+  background-color: hsl(180, 29%, 50%)
+}
+.textCyan{
+  color: hsl(180, 29%, 50%);
+  font-size: 1.2rem;
+  vertical-align: middle;
+  padding-top: .15rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.colorCyanText{
+   color: hsl(180, 29%, 50%);
+   font-weight: 700;
+}
+.company{
+    color: hsl(180, 29%, 50%);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+  
+.font-weight{   
+    font-weight: 700;
+}
+.colorText{
+  color: hsl(180, 14%, 20%)
+}
+
+.backgroundFeatured{
+  background-color: hsl(180, 14%, 20%);
+    vertical-align: middle
+}
+
+.details{
+  font-weight: 700;
+}
+
+.borderCyan{
+  border-color: hsl(180, 29%, 50%);
+}
+
+.xHover:hover{
+  background-color: hsl(180, 14%, 20%);
+  color: hsl(180, 52%, 96%);
+    transition: background-color .2s ease-in,
+      color .2s ease-in;
+}
+
+.hoverSkill:hover{
+  background-color: hsl(180, 29%, 50%);
+  color: hsl(180, 31%, 95%);
+  transition: background-color .2s ease-in , color .2s ease-in;
+}
+
+.companyHover:hover{
+  color: hsl(180, 29%, 50%);
+    transition: color .2s ease-in;
+}
+
+@media  screen and (min-width:1024px) {
+  .isMobile {
+      display: block;
+    }
+}
+
+@media screen and (min-width:1024px) {
+  .isMobile {
+    display: none;
+  }
+  
+  .isDesktop{
+    display: block;
+  }
 }
